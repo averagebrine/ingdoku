@@ -81,17 +81,17 @@ function tryTile() {
         if (this.innerText != "") {
             return;
         }
-    
-        let coords = this.id.split("-");
-        let r = parseInt(coords[0]);
-        let c = parseInt(coords[1]);
+    }
 
-        if (solution[r][c] = brushNum.id) {
-            this.innerText = brushNum.id;
-        }
-        else {
-            errors++;
-            document.getElementById("errors").innerText = errors;
-        }
+    let coords = this.id.split("-");
+    let r = parseInt(coords[0]);
+    let c = parseInt(coords[1]);
+
+    if (solution[r][c] == brushNum.id) {
+        this.innerText = brushNum.id; // why does this line make it go break >:(
+    }
+    else {
+        mistakes++;
+        document.getElementById("mistakes").innerText = mistakes
     }
 }
