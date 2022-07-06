@@ -78,3 +78,8 @@ hr {
 .vertical-line {
     border-right: 1px solid black;
 }
+
+#version {
+    text-align: left;
+    color: orange;
+}

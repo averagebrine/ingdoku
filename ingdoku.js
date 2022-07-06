@@ -30,6 +30,8 @@ var solution =
     "812945763"
 ]
 
+var version = "1.0.1"
+
 window.onload = function() {
     setGame();
 }
@@ -66,6 +68,8 @@ function setGame() {
             document.getElementById("board").append(tile);
         }
     }
+
+    document.getElementById("version").innerText = version;
 }
 
 function selectBrush() {
