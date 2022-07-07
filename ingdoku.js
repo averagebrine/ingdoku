@@ -43,7 +43,7 @@ var ingots =
     9: "tiles/9"
 }
 
-var version = "1.0.3"
+var version = "1.0.4"
 
 window.onload = function() {
     setGame();
