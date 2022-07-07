@@ -30,7 +30,20 @@ var solution =
     "812945763"
 ]
 
-var version = "1.0.1"
+var ingots =
+{
+    1: "tiles/1",
+    2: "tiles/2",
+    3: "tiles/3",
+    4: "tiles/4",
+    5: "tiles/5",
+    6: "tiles/6",
+    7: "tiles/7",
+    8: "tiles/8",
+    9: "tiles/9"
+}
+
+var version = "1.0.2"
 
 window.onload = function() {
     setGame();
@@ -43,6 +56,7 @@ function setGame() {
         let number = document.createElement("div");
         number.id = i
         number.innerText = i;
+        number.style.backgroundImage = "url('./" + ingots[i] + ".png')";
         number.addEventListener("click", selectBrush);
         number.classList.add("digit");
         document.getElementById("digits").appendChild(number);
@@ -54,7 +68,9 @@ function setGame() {
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
             if (board[r][c] != "-") {
-                tile.innerText = board[r][c];
+                var tileValue = board[r][c];
+                tile.innerText = tileValue;
+                tile.style.backgroundImage = "url('./" + ingots[board[r][c]] + ".png')";
                 tile.classList.add("tile-given");
             }
             if (r == 2 || r == 5) {
@@ -92,7 +108,8 @@ function tryTile() {
     let c = parseInt(coords[1]);
 
     if (solution[r][c] == brushNum.id) {
-        this.innerText = brushNum.id; // why does this line make it go break >:(
+        this.innerText = brushNum.id;
+        this.style.backgroundImage = "url('./" + ingots[brushNum.id] + ".png')";
     }
     else {
         mistakes++;

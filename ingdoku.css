@@ -5,7 +5,7 @@ body {
 
 hr {
     width: 450px;
-    color: lightgray;
+    color: gray;
 }
 
 #title {
@@ -28,10 +28,10 @@ hr {
 .tile {
     width: 48px;
     height: 48px;
-    border: 1px solid lightgray;
+    border: 1px solid gray;
 
     /* text */
-    font-size: 20;
+    font-size: 0;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -39,7 +39,7 @@ hr {
 }
 
 .tile-given {
-    background-color: whitesmoke;
+    background-color: lightgray;
 }
 
 #digits {
@@ -58,7 +58,7 @@ hr {
     margin: 2px;
 
     /* text */
-    font-size: 20;
+    font-size: 0;
     font-weight: bold;
     display: flex;
     justify-content: center;
