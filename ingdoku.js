@@ -43,7 +43,7 @@ var ingots =
     9: "tiles/9"
 }
 
-var version = "1.0.2"
+var version = "1.0.3"
 
 window.onload = function() {
     setGame();
@@ -74,12 +74,15 @@ function setGame() {
                 tile.classList.add("tile-given");
             }
             if (r == 2 || r == 5) {
-                tile.classList.add("horizontal-line");
+                tile.classList.add("border-bottom");
             }
             if (c == 2 || c == 5) {
-                tile.classList.add("vertical-line");
+                tile.classList.add("border-right");
             }
+            tile.addEventListener("click", unhover);
             tile.addEventListener("click", tryTile);
+            tile.addEventListener("mouseenter", hover);
+            tile.addEventListener("mouseleave", unhover);
             tile.classList.add("tile");
             document.getElementById("board").append(tile);
         }
@@ -115,4 +118,20 @@ function tryTile() {
         mistakes++;
         document.getElementById("mistakes").innerText = mistakes
     }
+}
+
+function hover() {
+    if (this.innerText != "" || brushNum.id == null) {
+        return;
+    }
+    this.style.opacity = 0.5;
+    this.style.backgroundImage = "url('./" + ingots[brushNum.id] + ".png')";
+}
+
+function unhover() {
+    if (this.innerText != "" || brushNum.id == null) {
+        return;
+    }
+    this.style.opacity = 1;
+    this.style.backgroundImage = "";
 }

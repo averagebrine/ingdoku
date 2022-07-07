@@ -3,11 +3,6 @@ body {
     text-align: center;
 }
 
-hr {
-    width: 450px;
-    color: gray;
-}
-
 #title {
     color: gray;
 }
@@ -17,8 +12,11 @@ hr {
 }
 
 #board {
-    width: 450px;
-    height: 450px;
+    width: 456px;
+    height: 456px;
+
+    border: 3px solid gray;
+
 
     margin: 0 auto;
     display: flex;
@@ -43,7 +41,7 @@ hr {
 }
 
 #digits {
-    width: 450px;
+    width: 522px;
     height: 50px;
 
     margin: 0 auto;
@@ -52,9 +50,10 @@ hr {
 }
 
 .digit {
-    width: 44px;
-    height: 44px;
-    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
+    border: 2px solid gray;
+    background-color: lightgray;
     margin: 2px;
 
     /* text */
@@ -66,17 +65,24 @@ hr {
 }
 
 .digit-selected {
-    width: 42px;
-    height: 42px;
     border: 2px solid gold;
+    background-color: whitesmoke;
 }
 
-.horizontal-line {
-    border-bottom: 1px solid black;
+.border-top {
+    border-top: 1px solid black;
 }
 
-.vertical-line {
-    border-right: 1px solid black;
+.border-bottom {
+    border-bottom: 4px solid gray;
+}
+
+.border-left {
+    border-left: 1px solid black;
+}
+
+.border-right {
+    border-right: 4px solid gray;
 }
 
 #version {
